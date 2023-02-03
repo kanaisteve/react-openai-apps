@@ -1,8 +1,10 @@
-const { Configuration, OpenAIApi } = require("openai");
-const expres = require('express')
-// add body parser and cors to express
-const bodyParser = require('body-parser')
-const cors = require('cors')
+import { Configuration, OpenAIApi } from "openai";
+import express from 'express';
+import * as dotenv from 'dotenv';
+import bodyParser  from 'body-parser';
+import cors from 'cors';
+
+dotenv.config();
 
 // Connect to OpenAI API
 const configuration = new Configuration({ 
@@ -13,7 +15,7 @@ const openai = new OpenAIApi(configuration);
 
 
 // Create a simple express api that calls the function above
-const app = expres()
+const app = express()
 app.use(bodyParser.json())
 app.use(cors())
 const port = 3080
