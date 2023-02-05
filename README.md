@@ -3,11 +3,11 @@ OpenAI Project to build AI applications using the OpenAI APIs. Learn how to gene
 using React.js and Node.js
 
 <p>
-  <img src="img-generator/src/assets/openai_img_generator_prompt.png" alt="chatGPT v2.0" />
+  <img src="img-generator/src/assets/openai_img_generator_prompt.png" alt="Image Generator" />
 </p>
 
 <p>
-  <img src="img-generator/src/assets/openai_img_generator_response.png" alt="chatGPT v2.0" />
+  <img src="img-generator/src/assets/openai_img_generator_response.png" alt="Image Generator" />
 </p>
 
 ## Image generation
