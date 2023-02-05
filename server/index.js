@@ -37,6 +37,49 @@ app.post('/generate-image', async (req, res) => {
     }
 });
 
+// app.post('/question-and-answer', async (req, res) => {
+//     try {
+//         const { prompt } = req.body;
+//         console.log(prompt);
+//         const reponse = await openai.createCompletion({
+//             model: "text-davinci-003",
+//             prompt: `${prompt}`,
+//             temperature: 0,
+//             max_tokens: 100,
+//             top_p: 1,
+//             frequency_penalty: 0.0,
+//             presence_penalty: 0.0,
+//             stop: ["\n"],
+//         });
+
+//         console.log(reponse.data.choices);
+//         res.json({
+//             data: reponse.data.choices[0].text,
+//         })
+//     } catch (error) {
+//         console.error(error.message);
+//         res.status(500).send({error: error.message})
+//     }
+// });
+
+app.post('/question-and-answer', async (req, res) => {
+    try {
+        const object = req.body;
+        console.log(object);
+        if (typeof data === 'object') return data;
+        if (typeof object === 'string') return JSON.parse(data);
+        const reponse = await openai.createCompletion(object);
+
+        console.log(reponse);
+        res.json({
+            data: reponse,
+        })
+    } catch (error) {
+        console.error(error.message);
+        res.status(500).send({error: error.message})
+    }
+});
+
 app.post('/', async (req, res) => {
      try {
         const { message } = req.body;
