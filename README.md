@@ -2,6 +2,18 @@
 OpenAI Project to build AI applications using the OpenAI APIs. Learn how to generate or manipulate images with DALL·E models 
 using React.js and Node.js
 
+<p>
+  <img src="img-generator/src/assets/openai_linguistics_home.png" alt="Text Manipulator" />
+</p>
+
+<p>
+  <img src="img-generator/src/assets/openai_img_generator_prompt.png" alt="Image Generator" />
+</p>
+
+<p>
+  <img src="img-generator/src/assets/openai_img_generator_response.png" alt="Image Generator" />
+</p>
+
 ## Image generation
 The Images API provides three methods for interacting with images:
 1. Creating images from scratch based on a text prompt
